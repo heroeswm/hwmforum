@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !=/hwmforum/index.pl
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^([^\.]*)\.pl /hwmforum/index.pl?mod=$1&%1 [L]
+RewriteCond %{REQUEST_URI} !=/hwmforum/index.pl
+RewriteRule ^$ /hwmforum/index.pl?mod=forum [L]
